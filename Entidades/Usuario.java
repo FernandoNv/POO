@@ -5,12 +5,13 @@ public class Usuario {
     private String nome;
     private String email;
     private ArrayList<Conteudo> listaConteudo;
-    private ArrayList<Blog> listaBlogs;
+    private ArrayList<Blog> listaBlog;
 
     public Usuario(String nome, String email){
         this.nome = nome;
         this.email = email;
         this.listaConteudo = new ArrayList<Conteudo>();
+        this.listaBlog = new ArrayList<Blog>();
     }
 
     public String getNome() {
@@ -26,6 +27,6 @@ public class Usuario {
     }
 
     public void associarBlog(Blog blog){
-        this.listaBlogs.add(blog);
+        this.listaBlog.add(blog);
     }
 }
