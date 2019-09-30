@@ -1,6 +1,6 @@
 package Elements;
+
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Jogada {
     private static int contJogadas;
@@ -9,12 +9,6 @@ public class Jogada {
     public Jogada(){
         contJogadas = 0;
         this.listaPontos = new ArrayList();
-    }
-    
-    public int lancarDado(){
-        Random random = new Random();
-        int valor = random.nextInt(6);
-        return valor;
     }
     
     public boolean verificaJogada(int ponto){
@@ -27,10 +21,11 @@ public class Jogada {
                 return false;
             }
         }
-        int dado1 = lancarDado();
-        int dado2 = lancarDado();
+        int dado1 = Dado.lancarDado();
+        int dado2 = Dado.lancarDado();
         int soma = dado1 + dado2;
-        
+
+        System.out.println("Pontos: " + soma);
         this.listaPontos.add(soma);
         if(ponto == soma){
             return true;
@@ -43,12 +38,11 @@ public class Jogada {
         return verificaJogada(ponto);
     }
     
-    public int[] listaJogadas(){
-        int lenthListPontos = this.listaPontos.size();
-        int[] jogadas = new int[lenthListPontos];
-        jogadas = this.listaPontos.toArray(jogadas);
+    public Integer[] listaJogadas(){
+        Integer[] pontos = new Integer[this.listaPontos.size()];
+        pontos = this.listaPontos.toArray(pontos);
 
-        return jogadas;
+        return pontos;
     }
     
     public int getContJogadas(){
