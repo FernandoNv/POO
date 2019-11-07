@@ -13,7 +13,7 @@ public class Dicionario {
         System.out.println("   Digite uma palavra   ");
         System.out.println("========================");
         String p = scanner.next();
-        Palavra palavr = (Palavra)crianca.getMapaPalavras().get(p);
+        Palavra palavr = crianca.getMapaPalavras().get(p);
         System.out.println(palavr.getPalavra());
         System.out.println(crianca.getSignificado());
         System.out.println(palavr.getColocacao());
