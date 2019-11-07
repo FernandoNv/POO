@@ -1,14 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Dicionario;
+import java.util.HashMap;
+import java.util.Map;
 
-/**
- *
- * @author Aluno
- */
-public class Synset {
-    
+public abstract class Synset {
+    private String significado;
+    private Map<String, Palavra> mapaPalavras = new HashMap();
+
+    Synset(String significado) {
+        this.significado = significado;
+    }
+
+    public void setSignificado(String significado) {
+        this.significado = significado;
+    }
+
+    public void setMapaPalavras(Map<String, Palavra> mapaPalavras) {
+        this.mapaPalavras = mapaPalavras;
+    }
+
+    String getSignificado() {
+        return this.significado;
+    }
+
+    Map<String, Palavra> getMapaPalavras() {
+        return this.mapaPalavras;
+    }
+
+    void addPalavra(Palavra palavra) {
+        this.mapaPalavras.put(palavra.getPalavra(), palavra);
+    }
 }

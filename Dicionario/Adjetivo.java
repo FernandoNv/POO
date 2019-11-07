@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Dicionario;
-
-/**
- *
- * @author Aluno
- */
-public class Adjetivo {
-    
+public class Adjetivo extends Synset {
+    public Adjetivo(String significado) {
+        super(significado);
+    }
 }

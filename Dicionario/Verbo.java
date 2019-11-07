@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Dicionario;
-
-/**
- *
- * @author Aluno
- */
-public class Verbo {
-    
+public class Verbo extends Synset {
+    public Verbo(String significado) {
+        super(significado);
+    }
 }
